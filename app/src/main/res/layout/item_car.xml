@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+  <androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_100sdp"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <ImageView
+        android:id="@+id/ivCarPhoto"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_car_placeholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivCarPhoto"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+          android:id="@+id/tvBrand"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/_8sdp"
+          android:layout_marginEnd="@dimen/_8sdp"
+          android:text="Brand Name"
+          android:textSize="@dimen/_15sdp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+          android:id="@+id/tvIsUsedTitle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/_8sdp"
+          android:layout_marginTop="@dimen/_8sdp"
+          android:layout_marginEnd="@dimen/_8sdp"
+          android:layout_marginBottom="@dimen/_5sdp"
+          android:text="@string/condition"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/tvBrand" />
+
+        <TextView
+          android:id="@+id/tvIsUsedValue"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/_8sdp"
+          android:layout_marginEnd="@dimen/_8sdp"
+          android:layout_marginBottom="@dimen/_5sdp"
+          android:text="Used"
+          android:textStyle="bold"
+          app:layout_constraintStart_toEndOf="@+id/tvIsUsedTitle"
+          app:layout_constraintTop_toBottomOf="@+id/tvBrand" />
+
+        <TextView
+          android:id="@+id/tvConstructionYear"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/_8sdp"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:layout_marginEnd="@dimen/_8sdp"
+          android:text="@string/construction_year"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/tvIsUsedValue" />
+
+        <TextView
+          android:id="@+id/tvConstructionYearValue"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:layout_marginEnd="@dimen/_8sdp"
+          android:layout_marginBottom="@dimen/_5sdp"
+          android:text="01.2015"
+          android:textStyle="bold"
+          app:layout_constraintStart_toEndOf="@+id/tvConstructionYear"
+          app:layout_constraintTop_toBottomOf="@+id/tvIsUsedValue" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

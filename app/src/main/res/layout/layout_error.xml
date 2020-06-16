@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/layout_background_progress"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/color_background"
+  android:clickable="true"
+  android:focusable="true"
+  android:focusableInTouchMode="true"
+  android:visibility="gone">
+
+  <LinearLayout
+    android:id="@+id/layout_no_internet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:orientation="vertical">
+
+    <TextView
+      android:id="@+id/tv_no_internet"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="@dimen/_20sdp"
+      android:text="@string/no_internet_message"
+      android:textColor="@color/color_black_text"
+      android:textSize="@dimen/_15sdp"
+      android:textStyle="bold"
+      android:visibility="gone" />
+
+    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+      android:id="@+id/btn_try_again"
+      style="@style/BlueButtonStyle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="@dimen/_40sdp"
+      android:layout_marginBottom="@dimen/_16sdp"
+      android:paddingStart="@dimen/_40sdp"
+      android:paddingEnd="@dimen/_40sdp"
+      android:text="@string/reload"
+      android:textSize="@dimen/_15sdp"
+      android:visibility="gone"
+      app:finalCornerAngle="@dimen/_24sdp"
+      app:initialCornerAngle="@dimen/_5sdp" />
+  </LinearLayout>
+</RelativeLayout>

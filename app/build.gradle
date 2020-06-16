@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+
+android {
+  compileSdkVersion rootProject.ext.compileSdkVersion
+  buildToolsVersion rootProject.ext.buildToolsVersion
+
+  defaultConfig {
+    applicationId rootProject.ext.applicationId
+    minSdkVersion rootProject.ext.minSdkVersion
+    targetSdkVersion rootProject.ext.targetSdkVersion
+    versionCode rootProject.ext.versionCode
+    versionName rootProject.ext.versionName
+
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+      buildConfigField 'String', 'MAIN_URL', '"http://demo1286023.mockable.io/"'
+    }
+    debug {
+      buildConfigField 'String', 'MAIN_URL', '"http://demo1286023.mockable.io/"'
+    }
+  }
+
+  viewBinding {
+    enabled = true
+  }
+  
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+}
+
+dependencies {
+  implementation fileTree(dir: "libs", include: ["*.jar"])
+  // appcompat
+  implementation "androidx.appcompat:appcompat:$rootProject.appcompat_version"
+  // material
+  implementation "com.google.android.material:material:$rootProject.material_version"
+  // constraintLayout
+  implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraint_layout_version"
+  // swipe refresh layout
+  implementation "androidx.swiperefreshlayout:swiperefreshlayout:$rootProject.swipe_resresh_layout_version"
+  // testing
+  testImplementation "junit:junit:$rootProject.test_junit_version"
+  androidTestImplementation "androidx.test.ext:junit:$rootProject.android_test_junit_version"
+  androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espresso_version"
+  // RxJava
+  implementation "io.reactivex.rxjava2:rxjava:$rootProject.rx_java_version"
+  // RxAndroid
+  implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rx_android_version"
+  // dagger 2
+  implementation "com.google.dagger:dagger:$rootProject.dagger_version"
+  annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger_version"
+  annotationProcessor "com.google.dagger:dagger-android-processor:$rootProject.dagger_version"
+  // Gson
+  implementation "com.google.code.gson:gson:$rootProject.gson_version"
+  // retrofit 2
+  implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofit_version"
+  implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofit_version"
+  implementation "com.squareup.retrofit2:converter-scalars:$rootProject.retrofit_version"
+  implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofit_version"
+  // okhttp3
+  implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttp3_version"
+  // lifecycle (ViewModel & LiveData)
+  implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycle_extensions_version"
+  annotationProcessor "androidx.lifecycle:lifecycle-common-java8:$rootProject.lifecycle_extensions_version"
+  // glide
+  implementation "com.github.bumptech.glide:glide:$rootProject.glide_version"
+  annotationProcessor "com.github.bumptech.glide:compiler:$rootProject.glide_version"
+  // dimens libraries
+  implementation "com.intuit.sdp:sdp-android:$rootProject.dimens_version"
+  // Loading Button
+  implementation "br.com.simplepass:loading-button-android:$loading_btn_version"
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#6200EE</color>
+  <color name="colorPrimaryDark">#3700B3</color>
+  <color name="colorAccent">#03DAC5</color>
+
+  <!-- start progress layout colors -->
+  <color name="color_gray_text">#a1a5b1</color>
+  <color name="color_black_text">#32343d</color>
+  <color name="color_background">#F1F1F1</color>
+  <color name="blue">#1976D2</color>
+  <!-- end progress layout colors -->
+
+</resources>

@@ -1,0 +1,13 @@
+<resources>
+  <string name="app_name">Car Showroom</string>
+  <string name="reload">Reload</string>
+  <string name="no_internet_message">Ops, No Internet connection!</string>
+  <string name="no_items">No items found!</string>
+  <string name="loading">Loading…</string>
+  <string name="server_error">Server error!</string>
+  <string name="condition">"Condition: "</string>
+  <string name="construction_year">"Construction Year: "</string>
+  <string name="used">Used</string>
+  <string name="is_new">New</string>
+
+</resources>
